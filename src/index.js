@@ -1,5 +1,5 @@
 import '../style.css';
-import Scene from './Scene';
+import Scene from './scene';
 
 new Scene();
 

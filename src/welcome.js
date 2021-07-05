@@ -3,9 +3,9 @@ import CANNON from 'cannon';
 const fontURL = './src/fonts/droid_sans_mono_regular.typeface.json';
 
 // CONSTANTS
-const margin = 6;
+const margin = 7;
 const totalMass = 1;
-const force = 5;
+const force = 25;
 /////////////////////
 
 export default class Welcome {
@@ -89,14 +89,14 @@ export default class Welcome {
     // Settings to give the font a better look
     const fontOptions = {
       font: f,
-      size: 1.9,
+      size: 4,
       height: 0.4,
-      curveSegments: 24,
+      curveSegments: 5,
       bevelEnabled: true,
-      bevelThickness: 0.4,
+      bevelThickness: 0.35,
       bevelSize: 0.3,
       bevelOffset: 0,
-      bevelSegments: 10,
+      bevelSegments: 4,
     };
 
     const groundMat = new CANNON.Material();
@@ -129,7 +129,7 @@ export default class Welcome {
       // Parse Each letter and generate mesh
       Array.from(innerText).forEach((letter, j) => {
         const material = new THREE.MeshPhongMaterial({
-          color: 0xffbcbc,
+          color: 0xcccccc,
           // color: 0x852d82,
         });
         const geometry = new THREE.TextBufferGeometry(letter, fontOptions);

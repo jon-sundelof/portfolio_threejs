@@ -48,8 +48,10 @@ export default class Scene {
       canvas: this.$container,
     });
 
-    this.renderer.setClearColor(0xedf6e5);
+    // this.renderer.setClearColor(0xedf6e5);
+    // this.renderer.setClearColor(0xffffff);
 
+    this.renderer.setClearColor(0x13161f);
     // this.renderer.setClearColor(0x202533);
     this.renderer.setSize(this.W, this.H);
     this.renderer.setPixelRatio(window.devicePixelRatio);
@@ -86,7 +88,7 @@ export default class Scene {
     foreLight.position.set(5, 5, 20);
     this.scene.add(foreLight);
 
-    const backLight = new THREE.DirectionalLight(0xffffff, 1);
+    const backLight = new THREE.DirectionalLight(0xffffff, 0.3);
     backLight.position.set(-5, -5, -10);
     this.scene.add(backLight);
   }
